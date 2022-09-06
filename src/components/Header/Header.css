@@ -1,0 +1,15 @@
+.header-container {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+nav.navbar {
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+}

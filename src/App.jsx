@@ -1,21 +1,22 @@
 import './App.css';
+import { Header } from './components/Header/Header.jsx';
+import { ConteudoPrincipal } from './components/ConteudoPrincipal/ConteudoPrincipal.jsx';
+import { Footer } from './components/Footer/Footer';
 
-function App() {
+export function App() {
 	return (
 		<>
 			<div className="container-to-do-list">
 				<div className="header-to-do-list">
-					<p>Header</p>
+					<Header />
 				</div>
 				<div className="main-content">
-					<p>Conteudo Principal</p>
+					<ConteudoPrincipal />
 				</div>
 				<div className="footer">
-					<p>Footer</p>
+					<Footer />
 				</div>
 			</div>
 		</>
 	);
 }
-
-export default App;

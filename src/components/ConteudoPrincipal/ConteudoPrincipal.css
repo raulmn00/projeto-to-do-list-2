@@ -1,0 +1,15 @@
+.main-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+section.secao-tarefas-ativas {
+	text-align: center;
+}
+section.secao-tarefas-feitas {
+	text-align: center;
+}
+section.secao-tarefas-excluidas {
+	text-align: center;
+}
