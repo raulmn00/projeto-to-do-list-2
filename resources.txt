@@ -1,0 +1,2 @@
+API: https://api-geladon.herokuapp.com/paletes/api-docs/#/Paletas
+API GET ALL: https://api-geladon.herokuapp.com/paletes/all-paletes

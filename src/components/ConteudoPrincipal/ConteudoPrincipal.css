@@ -4,12 +4,12 @@
 	align-items: center;
 	align-content: center;
 }
-section.secao-tarefas-ativas {
+section.secao-paletas-experimentadas {
 	text-align: center;
 }
-section.secao-tarefas-feitas {
+section.secao-paletas-nao-experimentadas {
 	text-align: center;
 }
-section.secao-tarefas-excluidas {
+section.secao-paletas-favoritas {
 	text-align: center;
 }
