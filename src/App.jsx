@@ -7,6 +7,7 @@ import { apiHelper } from './components/utils/api/Api';
 
 export function App() {
     const [paletas, setPaletas] = useState([]);
+    const [textTitle, setTextTitle] = useState('');
 
     const allPaletas = async () => {
         const response = await apiHelper.findAllPaletas();
@@ -20,12 +21,15 @@ export function App() {
                     <Header
                         setPaletaState={setPaletas}
                         functionAllPaletas={allPaletas}
+                        setTextTitle={setTextTitle}
                     />
                 </div>
                 <div className="main-content">
                     <ConteudoPrincipal
                         paletaState={paletas}
                         setPaletaState={setPaletas}
+                        setTextTitle={setTextTitle}
+                        textTitle={textTitle}
                     />
                 </div>
                 <div className="footer">

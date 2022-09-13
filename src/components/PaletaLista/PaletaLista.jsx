@@ -2,11 +2,19 @@ import './PaletaLista.css';
 import { PaletaItem } from '../PaletaItem/PaletaItem';
 import { useEffect } from 'react';
 import { apiHelper } from '../utils/api/Api';
+import { Title } from '../Title/Title';
+import { useState } from 'react';
 
-export function PaletaLista({ paletaState, setPaletaState }) {
+export function PaletaLista({
+    paletaState,
+    setPaletaState,
+    setTextTitle,
+    textTitle,
+}) {
     const allPaletas = async () => {
         const response = await apiHelper.findAllPaletas();
         setPaletaState(response);
+        setTextTitle('Todas as Paletas');
         //console.log('response all paletas: ', response);
     };
 
@@ -15,7 +23,7 @@ export function PaletaLista({ paletaState, setPaletaState }) {
     }, []);
     return (
         <section className="secao-paletas-experimentadas">
-            <h3>Paletas Experimentadas</h3>
+            <Title text={textTitle} />
             {paletaState.map((paleta, index) => {
                 return (
                     <PaletaItem

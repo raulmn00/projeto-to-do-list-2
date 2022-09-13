@@ -1,12 +1,13 @@
 import './Header.css';
 import { apiHelper } from '../utils/api/Api';
 
-export function Header({ setPaletaState, functionAllPaletas }) {
+export function Header({ setPaletaState, functionAllPaletas, setTextTitle }) {
     const findByIdPaleta = async () => {
         const input = document.querySelector('#inputId');
         const id = input.value;
         const response = await apiHelper.findPaletaById(id);
         setPaletaState([response]);
+        setTextTitle('Paleta Selecionada');
     };
 
     return (
