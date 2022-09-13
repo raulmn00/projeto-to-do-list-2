@@ -19,8 +19,17 @@ export function PaletaLista() {
 			<h3>Paletas Experimentadas</h3>
 			{paletas.map((paleta, index) => {
 				return (
-					<div key={index}>
-						<h3>{paleta.titulo}</h3>
+					<div className="paletaItemContainer" key={index}>
+						<h3>Nome: {paleta.titulo}</h3>
+						<p>Descrição: {paleta.descricao}</p>
+						<p>
+							Preço: R${' '}
+							{paleta.preco.toFixed(2).replace('.', ',')}
+						</p>
+						<p>Sabor: {paleta.sabor}</p>
+						{paleta.possuiRecheio && (
+							<p>Recheio: {paleta.recheio}</p>
+						)}
 					</div>
 				);
 			})}

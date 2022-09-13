@@ -1,2 +1,23 @@
 API: https://api-geladon.herokuapp.com/paletes/api-docs/#/Paletas
 API GET ALL: https://api-geladon.herokuapp.com/paletes/all-paletes
+
+JSON.parse() = recebe uma STRING e o transforma em um objeto javascript;
+JSON.stringify() = recebe um OBJETO javascript e o transforma em uma string JSON;
+
+RESUMO DOS MÉTODOS HTTPS: 
+    -GET: Requisição mais comum de todas. Com ele, nós pedimos ao backend alguma informação, por isso o nome "GET" de "PEGAR".
+        Essa informação pode vir através de diversos formatos, como JSON, HTML, XML entre outros formatos.
+
+    -POST: Método utilizado quando queremos CRIAR ou POSTAR um recurso no banco de dados através do backend. 
+        O POST, diferente do GET não utiliza a URI para enviar as informações, mas sim o BODY da requisição, que será recebido pelo backend,
+        tratado e se estiver tudo correto, será enviado ao banco de dados.
+
+    -DELETE: Método utilizado para DELETAR algum recurso, como o próprio nome ja diz.
+    -PATCH: Método utilizado para atualizar PARTES de um recurso, e não o recurso todo.
+    -PUT: Método utilizado para guardar um recurso no banco de dados. SE o recurso já existir, ele deve ser ATUALIZADO, se não existir,
+        ele deve ser CRIADO.
+
+    -PUT/PATCH: Bom, como podemos ver, a diferença entre o PUT e o PATCH é a seguinte: enquanto o PUT é usado para ATUALIZAR somente, o PUT
+    tem sua condição de que SE O RECURSO JÁ EXISTIR, ATUALIZE SENÃO, CRIE. O PUT parece ser mais poderoso que o PATCH em questões técnicas, mas ambos funcionam para ATUALIZAR dados.
+    Em determinados casos, onde sei la, você sabe que aquele dado já existe, podemos utilizar o PATCH para apenas ATUALIZAR, mas em casos que você não sabe 
+    se esse dado existe, você pode utilizar o PUT que irá criar essa informação no banco de dados caso ela não exista.

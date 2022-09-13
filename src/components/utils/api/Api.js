@@ -6,14 +6,16 @@ export const apiHelper = {
 			method: 'GET',
 			headers: new Headers({ 'Content-Type': 'application/json' }),
 		});
-		return await response.json();
+		const data = response.json();
+		return await data;
 	},
 	findPaletaById: async (id) => {
 		const response = await fetch(defaultUrl + `/one-palete/${id}`, {
 			method: 'GET',
 			headers: new Headers({ 'Content-Type': 'application/json' }),
 		});
-		return await response.json();
+		const data = response.json();
+		return await data;
 	},
 	updatePaleta: async (id, paletaAtualizada) => {
 		fetch(defaultUrl + `/update-palete/${id}`, {
