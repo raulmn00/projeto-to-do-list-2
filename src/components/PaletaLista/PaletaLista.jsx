@@ -1,6 +1,7 @@
 import './PaletaLista.css';
 import { apiHelper } from '../utils/api/Api';
 import { useEffect, useState } from 'react';
+import { PaletaItem } from '../PaletaItem/PaletaItem';
 
 export function PaletaLista() {
 	const [paletas, setPaletas] = useState([]);
@@ -19,18 +20,17 @@ export function PaletaLista() {
 			<h3>Paletas Experimentadas</h3>
 			{paletas.map((paleta, index) => {
 				return (
-					<div className="paletaItemContainer" key={index}>
-						<h3>Nome: {paleta.titulo}</h3>
-						<p>Descrição: {paleta.descricao}</p>
-						<p>
-							Preço: R${' '}
-							{paleta.preco.toFixed(2).replace('.', ',')}
-						</p>
-						<p>Sabor: {paleta.sabor}</p>
-						{paleta.possuiRecheio && (
-							<p>Recheio: {paleta.recheio}</p>
-						)}
-					</div>
+					<PaletaItem
+						id={paleta.id}
+						titulo={paleta.titulo}
+						descricao={paleta.descricao}
+						preco={paleta.preco}
+						possuiRecheio={paleta.possuiRecheio}
+						recheio={paleta.recheio}
+						sabor={paleta.sabor}
+						index={index}
+						key={index}
+					/>
 				);
 			})}
 		</section>
