@@ -8,11 +8,13 @@ import { apiHelper } from './components/utils/api/Api';
 export function App() {
     const [paletas, setPaletas] = useState([]);
     const [textTitle, setTextTitle] = useState('');
+    const [showForm, setShowForm] = useState(false);
 
     const allPaletas = async () => {
         const response = await apiHelper.findAllPaletas();
         setPaletas(response);
         console.log('response all paletas: ', response);
+        setTextTitle('Todas as Paletas');
     };
     return (
         <>
@@ -22,6 +24,8 @@ export function App() {
                         setPaletaState={setPaletas}
                         functionAllPaletas={allPaletas}
                         setTextTitle={setTextTitle}
+                        setShowForm={setShowForm}
+                        showFormState={showForm}
                     />
                 </div>
                 <div className="main-content">
@@ -30,6 +34,8 @@ export function App() {
                         setPaletaState={setPaletas}
                         setTextTitle={setTextTitle}
                         textTitle={textTitle}
+                        functionAllPaletas={allPaletas}
+                        showForm={showForm}
                     />
                 </div>
                 <div className="footer">

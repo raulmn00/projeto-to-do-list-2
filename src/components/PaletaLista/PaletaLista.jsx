@@ -3,7 +3,6 @@ import { PaletaItem } from '../PaletaItem/PaletaItem';
 import { useEffect } from 'react';
 import { apiHelper } from '../utils/api/Api';
 import { Title } from '../Title/Title';
-import { useState } from 'react';
 
 export function PaletaLista({
     paletaState,
@@ -15,7 +14,7 @@ export function PaletaLista({
         const response = await apiHelper.findAllPaletas();
         setPaletaState(response);
         setTextTitle('Todas as Paletas');
-        //console.log('response all paletas: ', response);
+        console.log('response all paletas: ', response);
     };
 
     useEffect(() => {
@@ -31,6 +30,7 @@ export function PaletaLista({
                         titulo={paleta.titulo}
                         descricao={paleta.descricao}
                         preco={paleta.preco}
+                        foto={paleta.foto}
                         possuiRecheio={paleta.possuiRecheio}
                         recheio={paleta.recheio}
                         sabor={paleta.sabor}
