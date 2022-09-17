@@ -9,6 +9,7 @@ export function ConteudoPrincipal({
     textTitle,
     functionAllPaletas,
     showForm,
+    setShowFormState,
 }) {
     return (
         <>
@@ -18,6 +19,7 @@ export function ConteudoPrincipal({
                         setPaletaState={setPaletaState}
                         functionAllPaletas={functionAllPaletas}
                         showFormState={showForm}
+                        setShowFormState={setShowFormState}
                     />
                     <PaletaLista
                         paletaState={paletaState}

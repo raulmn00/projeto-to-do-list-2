@@ -6,6 +6,7 @@ export function FormCreate({
     setPaletaState,
     functionAllPaletas,
     showFormState,
+    setShowFormState,
 }) {
     const [paletaCriada, setPaletaCriada] = useState([]);
 
@@ -14,6 +15,7 @@ export function FormCreate({
         await apiHelper.createPaleta(paletaCriada);
         const paletas = await apiHelper.findAllPaletas();
         setPaletaState(paletas);
+        setShowFormState(false);
         functionAllPaletas();
     };
 
@@ -98,7 +100,16 @@ export function FormCreate({
                     {paletaCriada.possuiRecheio === 'true' ? (
                         <>
                             <label htmlFor="recheio">Sabor do Recheio: </label>
-                            <input type="text" name="recheio" />
+                            <input
+                                type="text"
+                                name="recheio"
+                                onChange={(event) => {
+                                    setPaletaCriada({
+                                        ...paletaCriada,
+                                        recheio: event.target.value,
+                                    });
+                                }}
+                            />
                         </>
                     ) : null}
                     <button type="submit">CRIAR PALETA</button>

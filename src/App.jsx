@@ -36,6 +36,7 @@ export function App() {
                         textTitle={textTitle}
                         functionAllPaletas={allPaletas}
                         showForm={showForm}
+                        setShowFormState={setShowForm}
                     />
                 </div>
                 <div className="footer">
