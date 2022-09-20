@@ -7,9 +7,20 @@
 }
 nav.navbar {
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+}
+.header-to-do-list {
+    background: rgb(53, 139, 190);
+}
+button.btnHeader {
+    background: blue;
+    border: 0;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    margin: 20px;
 }

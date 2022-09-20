@@ -1,0 +1,9 @@
+.paletaItemContainer {
+    border: solid 2.5px white;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

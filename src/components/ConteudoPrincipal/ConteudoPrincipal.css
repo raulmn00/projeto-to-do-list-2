@@ -1,15 +1,17 @@
 .main-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #111;
+    color: white;
 }
 section.secao-paletas-experimentadas {
-	text-align: center;
+    text-align: center;
 }
 section.secao-paletas-nao-experimentadas {
-	text-align: center;
+    text-align: center;
 }
 section.secao-paletas-favoritas {
-	text-align: center;
+    text-align: center;
 }

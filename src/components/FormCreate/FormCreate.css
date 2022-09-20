@@ -1,0 +1,16 @@
+form.formCreate {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+button.btn-createPaleta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(53, 139, 190);
+    color: white;
+    border: 0;
+    margin: 20px 0;
+    padding: 10px;
+    cursor: pointer;
+}

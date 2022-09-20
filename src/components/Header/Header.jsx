@@ -1,5 +1,6 @@
 import './Header.css';
 import { apiHelper } from '../utils/api/Api';
+import logo from './logo.svg';
 
 export function Header({
     setPaletaState,
@@ -32,9 +33,9 @@ export function Header({
     return (
         <>
             <div className="header-container">
-                <h2 className="header-title">HEADER</h2>
+                <img src={logo} width="70px"></img>
                 <nav className="navbar">
-                    <button onClick={functionAllPaletas}>
+                    <button onClick={functionAllPaletas} className="btnHeader">
                         Todas as paletas
                     </button>
                     <label htmlFor="deleteId">Deletar Paleta </label>
@@ -44,7 +45,9 @@ export function Header({
                         id="deleteId"
                         placeholder="Digite um ID para excluir"
                     />
-                    <button onClick={deletePaleta}>DELETAR</button>
+                    <button onClick={deletePaleta} className="btnHeader">
+                        DELETAR
+                    </button>
                     <label htmlFor="inputId">Digite um ID: </label>
                     <input
                         type="text"
@@ -54,7 +57,7 @@ export function Header({
                     ></input>
                     <button
                         type="button"
-                        className="btnSearch"
+                        className="btnHeader"
                         onClick={findByIdPaleta}
                     >
                         PROCURAR
@@ -63,6 +66,7 @@ export function Header({
                         onClick={() => {
                             handleShowForm();
                         }}
+                        className="btnHeader"
                     >
                         MOSTRAR FORM
                     </button>

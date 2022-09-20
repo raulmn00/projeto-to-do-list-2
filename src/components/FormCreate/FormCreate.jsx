@@ -22,7 +22,7 @@ export function FormCreate({
     return (
         <div className="formContainer">
             {showFormState === true && (
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="formCreate">
                     <label htmlFor="tituloPaleta">Titulo: </label>
                     <input
                         type="text"
@@ -103,6 +103,7 @@ export function FormCreate({
                             <input
                                 type="text"
                                 name="recheio"
+                                defaultValue={true}
                                 onChange={(event) => {
                                     setPaletaCriada({
                                         ...paletaCriada,
@@ -112,7 +113,9 @@ export function FormCreate({
                             />
                         </>
                     ) : null}
-                    <button type="submit">CRIAR PALETA</button>
+                    <button type="submit" className="btn-createPaleta">
+                        CRIAR PALETA
+                    </button>
                 </form>
             )}
         </div>
